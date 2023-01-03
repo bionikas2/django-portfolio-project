@@ -6,3 +6,6 @@ class Blog(models.Model):
     date = models.DateField(auto_now_add=True)
     time = models.TimeField(auto_now_add=True)
     text = models.TextField()
+
+    def __str__(self):
+        return self.title

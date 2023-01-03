@@ -2,7 +2,12 @@
 
 {% load static %}
 
+<a href="{% url 'blog:all_blogs' %}">Blogs</a>
+<br />
+
 <img src="{% static 'portfolioApp/2.png' %}">
+
+<a href="{% static 'portfolioApp/resume.pdf' %}">Resume</a>
 
 <br />
 {% for project in projects %}
