@@ -1,0 +1,25 @@
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+}
+#projectphoto{
+
+    width: 500px; 
+    height: 500px; 
+    object-fit: cover;
+}
+
+#project_title{
+
+    text-align: center;
+    font-size: 28px;
+
+}
+
+#project_description{
+
+    text-align:center;
+    font-size: 24px;
+
+}

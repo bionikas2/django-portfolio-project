@@ -3,8 +3,11 @@ from .models import Blog
 
 # Create your views here.
 def all_blogs(request):
-    blogs = Blog.objects.order_by("-date", "-time")
-    return render(request, "blog/all_blogs.html", {"blogs": blogs})
+    blogs_count = Blog.objects.count()
+    blogs = Blog.objects.order_by("-date", "-time")[:9]
+    return render(
+        request, "blog/all_blogs.html", {"blogs": blogs, "blogs_count": blogs_count}
+    )
 
 
 def detail(request, blog_id):
