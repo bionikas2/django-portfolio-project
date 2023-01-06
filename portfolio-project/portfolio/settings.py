@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-(rwis9_&!h)np@vfd9q5(b_futb_15as-4nlpf^w!8t9z9wta%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['bionikas2.pythonanywhere.com']
+ALLOWED_HOSTS = ["bionikas2.pythonanywhere.com"]
 
 
 # Application definition
@@ -127,3 +127,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+try:
+    from .local_settings import *
+except ImportError:
+    print("No local file")
